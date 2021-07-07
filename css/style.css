@@ -1,1 +1,178 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --main-color: white;
+  --pr-color-tr: hsla(0, 0%, 100%, 0.75);
+  --state-color-tr: hsla(0, 0%, 100%, 0.6);
+  --main-background-color: hsl(233, 47%, 7%);
+  --card-background-color: hsl(244, 38%, 16%);
+  --accent-color: hsl(277, 64%, 61%);
+  --accent-color-tr: hsla(277, 100%, 50%, 0.431);
+  --font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-background-color);
+}
+
+body .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1000px;
+  border-radius: 4px;
+  width: 1000px;
+  background-color: var(--card-background-color);
+  font-family: "Inter";
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body .card .card-l-section {
+  position: relative;
+  padding: 4rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(50% - 7rem);
+  color: var(--main-color);
+}
+
+body .card .card-l-section .card-info h1 {
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+
+body .card .card-l-section .card-info h1 b {
+  color: var(--accent-color);
+}
+
+body .card .card-l-section .card-info p {
+  color: var(--pr-color-tr);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+body .card .card-l-section .card-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+body .card .card-l-section .card-stats .card-st {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .card .card-l-section .card-stats .card-st h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+body .card .card-l-section .card-stats .card-st span {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--state-color-tr);
+  font-weight: lighter;
+}
+
+body .card .card-r-img-section {
+  position: relative;
+  background-image: url(../images/image-header-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+}
+
+body .card .card-r-img-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color-tr);
+}
+
+@media (max-width: 1000px) {
+  body .card {
+    width: 768px;
+  }
+  body .card .card-l-section {
+    padding: 3rem 2.5rem;
+    width: calc(50% - 5rem) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body .card {
+    left: 0%;
+    top: 0%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin: 2rem 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: calc(100% - 2rem);
+  }
+  body .card .card-l-section {
+    width: calc(100% - 2rem) !important;
+    padding: 2rem 1rem;
+  }
+  body .card .card-l-section .card-info H1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  body .card .card-l-section .card-info p {
+    text-align: center;
+  }
+  body .card .card-l-section .card-stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .card .card-l-section .card-stats .card-st {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .card .card-r-img-section {
+    height: 20rem;
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
